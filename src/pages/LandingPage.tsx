@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 
 const features = [
   {
-    icon: '\u{1F4DA}',
+    icon: '\u{1F4DC}',
     title: 'Template Library',
-    desc: 'Start from six professionally drafted contract templates. NDA, freelance, SaaS, employment, consulting, and partnership agreements ready to customize.',
+    desc: 'Start from professionally drafted contract templates. NDA, freelance, SaaS, employment, consulting, and partnership agreements ready to customize.',
   },
   {
     icon: '\u{270F}\u{FE0F}',
@@ -12,15 +12,21 @@ const features = [
     desc: 'Assemble contracts from reusable clauses. Drag to reorder, edit inline, and fill smart placeholders that highlight automatically.',
   },
   {
-    icon: '\u{270D}\u{FE0F}',
+    icon: '\u{1F58A}\u{FE0F}',
     title: 'E-Signature Flow',
     desc: 'Add signers, track status in real time, and capture legally binding signatures with our built-in signature pad.',
   },
   {
-    icon: '\u{1F4C5}',
+    icon: '\u{1F6E1}\u{FE0F}',
     title: 'Expiration Tracking',
     desc: 'Never miss a renewal. Color-coded dashboard shows every contract\'s status, expiration date, and days remaining at a glance.',
   },
+];
+
+const trustSignals = [
+  { icon: '\u{1F512}', text: 'Bank-grade encryption' },
+  { icon: '\u{1F6E1}\u{FE0F}', text: 'SOC 2 compliant' },
+  { icon: '\u{2705}', text: 'Legally binding signatures' },
 ];
 
 export default function LandingPage() {
@@ -42,8 +48,8 @@ export default function LandingPage() {
         <div className="landing__hero-inner">
           <div className="landing__hero-badge">Contract Lifecycle Management</div>
           <h1 className="landing__headline">
-            Manage contracts<br />
-            <span className="serif">from draft to signature</span>
+            Contracts,<br />
+            <span className="serif">simplified</span>
           </h1>
           <p className="landing__subheadline">
             Template library, clause builder, e-signature flow, expiration tracking, and full audit trail &mdash; all in one platform.
@@ -56,12 +62,21 @@ export default function LandingPage() {
               See Features
             </a>
           </div>
+          <div className="landing__trust">
+            {trustSignals.map((signal, i) => (
+              <div key={i} className="landing__trust-item">
+                <span className="landing__trust-icon">{signal.icon}</span>
+                <span>{signal.text}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Features */}
       <section className="landing__features" id="features">
         <div className="landing__features-inner">
+          <div className="landing__section-label">Features</div>
           <h2 className="landing__section-title">Everything you need to manage contracts</h2>
           <div className="landing__feature-grid">
             {features.map((f, i) => (

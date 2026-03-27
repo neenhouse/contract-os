@@ -10,10 +10,10 @@ import type { Template } from '../lib/types';
 type View = 'templates' | 'editor' | 'signatures' | 'expiration' | 'audit';
 
 const navItems: { key: View; label: string; icon: string }[] = [
-  { key: 'templates', label: 'Templates', icon: '\u{1F4DA}' },
-  { key: 'signatures', label: 'Signatures', icon: '\u{270D}\u{FE0F}' },
-  { key: 'expiration', label: 'Expiration', icon: '\u{1F4C5}' },
-  { key: 'audit', label: 'Audit Trail', icon: '\u{1F4CB}' },
+  { key: 'templates', label: 'Templates', icon: '\u{1F4DC}' },
+  { key: 'signatures', label: 'Signatures', icon: '\u{1F58A}\u{FE0F}' },
+  { key: 'expiration', label: 'Expiration', icon: '\u{23F0}' },
+  { key: 'audit', label: 'Audit Trail', icon: '\u{1F6E1}\u{FE0F}' },
 ];
 
 export default function AppLayout() {
