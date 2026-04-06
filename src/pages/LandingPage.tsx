@@ -44,7 +44,7 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero */}
-      <section id="main-content" className="landing__hero">
+      <section id="main-content" className="landing__hero landing__hero--split">
         <div className="landing__hero-inner">
           <div className="landing__hero-badge">Contract Lifecycle Management</div>
           <h1 className="landing__headline">
@@ -70,6 +70,14 @@ export default function LandingPage() {
               </div>
             ))}
           </div>
+        </div>
+        <div className="landing__hero-image-panel">
+          <img
+            src="/hero-og.webp"
+            alt="ContractOS platform preview"
+            className="landing__hero-image"
+            loading="eager"
+          />
         </div>
       </section>
 
