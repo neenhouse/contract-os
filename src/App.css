@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100dvh;
   color: var(--text-muted);
   font-size: 1.1rem;
   gap: 12px;
@@ -94,7 +94,7 @@
    Landing Page
    ============================================================ */
 .landing {
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* Nav */
@@ -456,7 +456,7 @@
    ============================================================ */
 .app-layout {
   display: flex;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .sidebar {

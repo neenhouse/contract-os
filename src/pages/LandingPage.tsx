@@ -44,7 +44,7 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero */}
-      <section className="landing__hero">
+      <section id="main-content" className="landing__hero">
         <div className="landing__hero-inner">
           <div className="landing__hero-badge">Contract Lifecycle Management</div>
           <h1 className="landing__headline">

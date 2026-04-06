@@ -8,6 +8,7 @@ const AppLayout = lazy(() => import('./pages/AppLayout'));
 function App() {
   return (
     <BrowserRouter>
+      <a href="#main-content" className="skip-to-content">Skip to content</a>
       <Suspense fallback={<div className="loading">Loading...</div>}>
         <Routes>
           <Route path="/" element={<LandingPage />} />

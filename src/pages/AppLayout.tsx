@@ -59,7 +59,7 @@ export default function AppLayout() {
           </Link>
         </div>
       </aside>
-      <main className="app-main">
+      <main id="main-content" className="app-main">
         {view === 'templates' && <TemplateLibrary onSelectTemplate={handleSelectTemplate} />}
         {view === 'editor' && editingTemplate && (
           <ClauseEditor template={editingTemplate} onBack={handleBackToTemplates} />
