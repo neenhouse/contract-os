@@ -72,12 +72,10 @@ export default function LandingPage() {
           </div>
         </div>
         <div className="landing__hero-image-panel">
-          <img
-            src="/hero-og.webp"
-            alt="ContractOS platform preview"
-            className="landing__hero-image"
-            loading="eager"
-          />
+          <video autoPlay muted loop playsInline poster="/hero-og.webp" className="landing__hero-image">
+            <source src="/hero-og.webm" type="video/webm" />
+            <source src="/hero-og.mp4" type="video/mp4" />
+          </video>
         </div>
       </section>
 
