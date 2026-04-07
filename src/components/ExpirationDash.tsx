@@ -2,6 +2,8 @@ import { useState, useMemo } from 'react';
 import { mockContracts } from '../lib/data';
 import type { ContractStatus } from '../lib/types';
 
+const PAGE_LOAD_TIME = Date.now();
+
 type SortField = 'title' | 'expiresAt' | 'status';
 type SortDir = 'asc' | 'desc';
 
@@ -70,7 +72,7 @@ export default function ExpirationDash() {
   };
 
   const daysUntil = (dateStr: string) => {
-    const diff = Math.ceil((new Date(dateStr).getTime() - Date.now()) / (1000 * 60 * 60 * 24));
+    const diff = Math.ceil((new Date(dateStr).getTime() - PAGE_LOAD_TIME) / (1000 * 60 * 60 * 24));
     if (diff < 0) return `${Math.abs(diff)}d overdue`;
     if (diff === 0) return 'Today';
     return `${diff}d`;
